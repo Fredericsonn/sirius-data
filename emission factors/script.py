@@ -65,6 +65,20 @@ try:
                     """,
                     (type, factor)
         )
+
+    algo_param_values = [('Device', 3, 250, 0.475), ('Vehicle', 10, None, 0.26885)]
+
+    for x in algo_param_values :
+        type = x[0]
+        frequency = x[1]
+        input = x[2]
+        factor = x[3]
+        cur.execute("""
+                    INSERT INTO algo_param (type, usage_frequency, energy_input, emission_factor)
+                    VALUES (%s, %s, %s, %s)
+                    """,
+                    (type, frequency, input, factor)
+        )
     conn.commit()
 
 
