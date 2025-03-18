@@ -54,7 +54,7 @@ try:
        
         cur.execute(query, tuple(values))  
 
-    device_values = [('ELECTRICITY', 0.04), ('NATURAL_GAS', 2.02) ]
+    device_values = [('ELECTRICITY', 0.04), ('NATURAL_GAS', 2.38) ]
 
     for x in device_values :
         type = x[0]
